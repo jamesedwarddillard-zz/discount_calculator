@@ -1,4 +1,4 @@
-def discount_calculator(item_cost, relative_discount, absolute_discount):
+def discount_calc(item_cost, relative_discount, absolute_discount):
 	relative_discount_dollars = (relative_discount/100.0) * item_cost
 	#confirm that discounts aren't punative (no negative discounts)
 	if relative_discount_dollars < 0:
