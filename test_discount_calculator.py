@@ -12,6 +12,18 @@ class DiscountCalculatorTests(unittest.TestCase):
 		with self.assertRaises(ValueError):
 			cost = discount_calc(100, -10, 0)
 
+	def testNegativeAbsoluteDiscounts(self):
+		with self.assertRaises(ValueError):
+			cost = discount_calc(100, 10, -10)
+
+	def testNoNegativePrices(self):
+		cost = discount_calc(7, 101, 0)
+		self.assertEqual(cost, 0)
+
+	def testStandardDiscount(self):
+		cost = discount_calc(7,1.25, 1.01)
+		self.assertEqual(cost, 5.9025)
+
 
 if __name__ == "__main__":
 	unittest.main()

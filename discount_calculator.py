@@ -18,7 +18,7 @@ def discount_calc(item_cost, relative_discount, absolute_discount):
 
 
 def main():
-	cost = discount_calc(100, -10, 0)
+	cost = discount_calc(100, 10, 30)
 	print "After discounts, your total will be ${}.".format(cost)
 
 if __name__ == "__main__":
